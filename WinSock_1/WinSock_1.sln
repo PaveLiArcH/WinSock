@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinSock_1_9", "WinSock_1\WinSock_1.vcxproj", "{670B929E-F281-4F28-B142-14971622BAB8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinSock_1_7", "WinSock_1_7\WinSock_1_7.vcxproj", "{3B449554-DBB4-49E1-8444-9790CD6E814F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinSock_1_9_client", "WinSock_1_9_client\WinSock_1_9_client.vcxproj", "{D60B688C-5B1D-433B-91E1-35E6648AF877}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{670B929E-F281-4F28-B142-14971622BAB8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{670B929E-F281-4F28-B142-14971622BAB8}.Debug|Win32.Build.0 = Debug|Win32
+		{670B929E-F281-4F28-B142-14971622BAB8}.Release|Win32.ActiveCfg = Release|Win32
+		{670B929E-F281-4F28-B142-14971622BAB8}.Release|Win32.Build.0 = Release|Win32
+		{3B449554-DBB4-49E1-8444-9790CD6E814F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3B449554-DBB4-49E1-8444-9790CD6E814F}.Release|Win32.ActiveCfg = Release|Win32
+		{D60B688C-5B1D-433B-91E1-35E6648AF877}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D60B688C-5B1D-433B-91E1-35E6648AF877}.Debug|Win32.Build.0 = Debug|Win32
+		{D60B688C-5B1D-433B-91E1-35E6648AF877}.Release|Win32.ActiveCfg = Release|Win32
+		{D60B688C-5B1D-433B-91E1-35E6648AF877}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

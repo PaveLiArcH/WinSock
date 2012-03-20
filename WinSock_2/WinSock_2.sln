@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinSock_2_9", "WinSock_2\WinSock_2.vcxproj", "{6D5E5416-5A15-43E3-99AB-3F0D89BCEA01}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WinSock_2_9_client", "WinSock_2_9_client\WinSock_2_9_client.vcxproj", "{ED22D210-FCC4-4E8C-9E34-1077E356ABD3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D5E5416-5A15-43E3-99AB-3F0D89BCEA01}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6D5E5416-5A15-43E3-99AB-3F0D89BCEA01}.Debug|Win32.Build.0 = Debug|Win32
+		{6D5E5416-5A15-43E3-99AB-3F0D89BCEA01}.Release|Win32.ActiveCfg = Release|Win32
+		{6D5E5416-5A15-43E3-99AB-3F0D89BCEA01}.Release|Win32.Build.0 = Release|Win32
+		{ED22D210-FCC4-4E8C-9E34-1077E356ABD3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{ED22D210-FCC4-4E8C-9E34-1077E356ABD3}.Debug|Win32.Build.0 = Debug|Win32
+		{ED22D210-FCC4-4E8C-9E34-1077E356ABD3}.Release|Win32.ActiveCfg = Release|Win32
+		{ED22D210-FCC4-4E8C-9E34-1077E356ABD3}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
