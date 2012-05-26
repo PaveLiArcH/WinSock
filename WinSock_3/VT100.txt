@@ -1,0 +1,116 @@
+//ANSI/VT command reference (ASCII) // VT100
+//
+//Mnemonic		Command					ASCII		HEX
+//ALT			Alternate shift			-			-
+//BRK			Break					-			-
+//CAPS LOCK		Caps lock				-			-
+//CTL			Control					-			-
+//LCL			Local					-			-
+//NUML			Numeric lock			-			-
+//SHIFT			Shift					-			-
+//ENQ			Enquiry					enq			05
+//BEL			Bell					bel			07
+//BS			Back space				bs			08
+//HT			Horizontal tab			ht			09
+//LF			Line feed				lf			0A
+//VT			Vertical tab			vt			0B
+//FF			Form feed				ff			0C
+//CR			Carriage return			cr			0D
+//SO			Shift out				so			0E
+//SI			Shift in				si			0F
+//DLE			Data link escape		dle			10
+//CAN			Cancel					can			18
+//SS2			Single shift 2			ss2			19
+//ESC			Escape					esc			1B
+//S7C			Select 7bit ctrls		esc sp F	1B 20 46
+//S8C			Select 8bit ctrls		esc sp G	1B 20 47
+//DHL			Double height, top		esc # 3		1B 23 33
+//DHL			Double height, bottom	esc # 4		1B 23 34
+//SWL			Single width/height		esc # 5		1B 23 35
+//DWL			Double width			esc # 6		1B 23 36
+//ALN			Screen alignment		esc # 8		1B 23 38
+//SCS-0			Select G0 set (94)		esc ( x		1B 28 xx
+//SCS-1			Select G1 set (94)		esc ) x		1B 29 xx
+//SCS-2			Select G2 set (94)		esc * x		1B 2A xx
+//SCS-3			Select G3 set (94)		esc + x		1B 2B xx
+//SCS-1A		Select G1 set (96)		esc - x		1B 2D xx
+//SCS-2A		Select G2 set (96)		esc . x		1B 2E xx
+//SCS-3A		Select G3 set (96)		esc / x		1B 2F xx
+//SC			Save Cursor State		esc 7		1B 37
+//RC			Restore Cursor			esc 8		1B 38
+//PAM			App. keypad mode		esc =		1B 3D
+//PNM			Num. keypad mode		esc >		1B 3E
+//IND			Index					esc D		1B 44
+//NEL			Next line				esc E		1B 45
+//HTS			Horizontal tab set		esc H		1B 48
+//RI			Reverse Index			esc M		1B 4D
+//SS2			Single shift 2			esc N		1B 4E
+//SS3			Single shift 3			esc O		1B 4F
+//AK-0			App keypad 0			esc O p		1B 4F 70
+//AK-1			App keypad 1			esc O q		1B 4F 71
+//AK-2			App keypad 2			esc O r		1B 4F 72
+//AK-3			App keypad 3			esc O s		1B 4F 73
+//AK-4			App keypad 4			esc O t		1B 4F 74
+//AK-5			App keypad 5			esc O u		1B 4F 75
+//AK-6			App keypad 6			esc O v		1B 4F 76
+//AK-7			App keypad 7			esc O w		1B 4F 77
+//AK-8			App keypad 8			esc O x		1B 4F 78
+//AK-9			App keypad 9			esc O y		1B 4F 79
+//AK-(-)		App keypad minus		esc O m		1B 4F 6D
+//AK-(,)		App keypad comma		esc O l		1B 4F 6C
+//AK-(.)		App keypad period		esc O n		1B 4F 6E
+//AK-CR			App keypad Enter		esc O M		1B 4F 4D
+//PF1			App keypad PF1			esc O P		1B 4F 50
+//PF2			App keypad PF2			esc O Q		1B 4F 51
+//PF3			App keypad PF3			esc O R		1B 4F 52
+//PF4			App keypad PF4			esc O S		1B 4F 53
+//DCS			Device control string	esc P		1B 50
+//DA			Device attr request		esc Z		1B 5A
+//CSI			Control Seq Intro		esc [		1B 5B
+//ICH			Insert character		esc [ @		1B 5B 40
+//CUU			Cursor up				esc [ A		1B 5B 41
+//CUD			Cursor down				esc [ B		1B 5B 42
+//CUF			Cursor forward			esc [ C		1B 5B 43
+//CUB			Cursor backward			esc [ D		1B 5B 44
+//CNL			Cursor Next Line		esc [ E		1B 5B 45
+//CPL			Cursor Previous Line	esc [ F		1B 5B 46
+//HPA			Horizontal Pos Abs		esc [ G		1B 5B 47
+//CUP			Cursor position			esc [ H		1B 5B 48
+//ED			Erase data				esc [ J		1B 5B 4A
+//EL			Erase line				esc [ K		1B 5B 4B
+//IL			Insert line				esc [ L		1B 5B 4C
+//DL			Delete line				esc [ M		1B 5B 4D
+//EA			Erase area				esc [ O		1B 5B 4F
+//DCH			Delete character		esc [ P		1B 5B 50
+//SU			Scroll Up				esc [ S		1B 5B 53
+//SD			Scroll Down				esc [ T		1B 5B 54
+//ECH			Erase character			esc [ X		1B 5B 58
+//CBT			Cursor back tab			esc [ Z		1B 5B 5A
+//DA			Device attributes		esc [ c		1B 5B 63
+//HVP			Hor/vertical position	esc [ f		1B 5B 66
+//TBC			Tab clear				esc [ g		1B 5B 67
+//SM			Set mode				esc [ h		1B 5B 68
+//MC/0			Print screen			esc [ 0 i	1B 5B 30 69
+//MC/4			End host print			esc [ 4 i	1B 5B 34 69
+//MC/5			Start host print		esc [ 5 i	1B 5B 35 69
+//RM			Reset mode				esc [ l		1B 5B 6C
+//SGR			Set graphic rendition	esc [ m		1B 5B 6D
+//DSR			Device status			esc [ n		1B 5B 6E
+//SM78			Set Mode 7800			esc [ 1 q	1B 5B 31 71
+//SM77			Set Mode 7700			esc [ 2 q	1B 5B 32 71
+//SM73			Set Mode 7300			esc [ 3 q	1B 5B 33 71
+//SM83			Set Mode 8300			esc [ 4 q	1B 5B 34 71
+//SM64			Set Mode Ansi			esc [ 5 q	1B 5B 35 71
+//SCR			Scrolling region		esc [ r		1B 5B 72
+//SC			Save cursor				esc [ s		1B 5B 73
+//RC			Restore cursor			esc [ u		1B 5B 75
+//ST			String terminator		esc \		1B 5C
+//DMI			Disable manual input	esc `		1B 60
+//EMI			Enable manual input		esc b		1B 62
+//RIS			Terminal reset			esc c		1B 63
+//LS2			Lock shift 2			esc n		1B 6E
+//LS3			Lock shift 3			esc o		1B 6F
+//LS3R			Lock shift 3 (R)		esc ?		1B 7C
+//LS2R			Lock shift 2 (R)		esc }		1B 7D
+//LS1R			Lock shift 1 (R)		esc ~		1B 7E
+//DEL			Delete					del			7F

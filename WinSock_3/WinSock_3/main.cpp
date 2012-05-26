@@ -7,12 +7,16 @@
 #include <iostream>
 #include <string>
 
+#include "cCommand.h"
+#include "cDataAccepter.h"
+
 SOCKET connectionSocket;
 
 HANDLE _mutex, _communicationEnded;
 
 const int c_BufSize=1024;
 const std::string c_CrLf="\r\n";
+cDataAccepter c_DataAccepter;
 
 void exitFunc()
 {
@@ -62,39 +66,40 @@ void getTerminalReactions(void *)
 			break;
 		default:
 			int i=0;
-			while (i<_recvState)
-			{
-				switch (buf[i])
-				{
-				case 0xFF:
-					// IAC
-					i++;
-					if (i<_recvState)
-					{
-						/*switch (buf[i])
-						{
-						default:
+			//while (i<_recvState)
+			//{
+			//	switch (buf[i])
+			//	{
+			//	case '\xff':
+			//		if ((i+2)<_recvState)
+			//		{
+			//			// IAC
+			//			i++;
+			//			/*switch (buf[i])
+			//			{
+			//			default:
 
-						}*/
-						i++;
-						if (i<_recvState)
-						{
-							char _c=buf[i];
-							bool _multiByte=(_c==0xFA);
-							while (_multiByte&&(i<_recvState))
-							{
-								_multiByte=(buf[i]!=0xF0);
-								i++;
-							}
-						}
-					}
-					break;
-				default:
-					printf("%c",buf[i]);
-					i++;
-					break;
-				}
-			}
+			//			}*/
+			//			i++;
+			//			if (i<_recvState)
+			//			{
+			//				char _c=buf[i];
+			//				bool _multiByte=(_c==0xFA);
+			//				while (_multiByte&&(i<_recvState))
+			//				{
+			//					_multiByte=(buf[i]!=0xF0);
+			//					i++;
+			//				}
+			//			}
+			//		}
+			//		break;
+			//	default:
+			//		printf("%c",buf[i]);
+			//		break;
+			//	}
+			//	i++;
+			//}
+			c_DataAccepter.cm_Read(_recvState, (unsigned char *)buf);
 			break;
 		}
 	}
@@ -140,7 +145,7 @@ int _tmain(int argC, TCHAR *argV[])
 			if (_connectResult==0)
 			{
 				_tprintf(_T("Socket connected\n"));
-
+				system("cls");
 				/*int _fail=ioctlsocket(connectionSocket, FIONBIO, &_notBlock);
 				if (_fail)
 				{
